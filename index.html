@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#97144D" />
+    <meta name="description" content="Axis Bank RetailOps – GRAP SOP Management" />
+    <title>GRAP SOP Management | Axis Bank</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+    <script>
+      /*
+       * Zoom-out compensation. When the browser is zoomed out (Ctrl/Cmd −), the page gets more CSS pixels
+       * than the window has, so everything shrinks. We detect that ratio (outerWidth / innerWidth) and raise
+       * the root font size by the same amount. The whole UI is rem-based, so it keeps its 100% size and layout.
+       * Zooming in is left alone (the layout adapts instead) so people who need larger text still get it.
+       */
+      (function () {
+        var root = document.documentElement;
+        function fit() {
+          var zoom = window.outerWidth && window.innerWidth ? window.outerWidth / window.innerWidth : 1;
+          var scale = zoom < 0.97 ? Math.min(1 / zoom, 4) : 1;
+          root.style.fontSize = scale === 1 ? '' : 16 * scale + 'px';
+          root.style.setProperty('--zoom-compensation', String(scale));
+        }
+        fit();
+        window.addEventListener('resize', fit);
+      })();
+    </script>
+  </head>
+  <body>
+    <noscript>Please enable JavaScript to use GRAP SOP Management.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
